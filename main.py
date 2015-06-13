@@ -59,7 +59,7 @@ def download_random_crap(size):
 def download_category_pages(category_title):
     category_title = category_title.replace(' ','_')
     url = 'http://en.wikipedia.org/w/api.php?format=json&action=query&list=categorymembers&cmtitle=Category:'+category_title+'&cmlimit=100'
-    
+
     categoryjson = download_json(url)
     file = open(category_title+ '.txt', 'a', encoding='utf-8')
     for page in categoryjson['query']['categorymembers']:
@@ -68,19 +68,19 @@ def download_category_pages(category_title):
         print(title, flush=True)
         if title[0:9] == "Category:":
             continue
-        
+
         url = 'http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&redirects=true&titles='+title
         #print(url)
-        
+
         #print(pagecontent)
         pagejson = download_json(url)
         pagecontent = json_to_text(pagejson)
-        
+
         file.write(pagecontent)
         #break
 
     file.close()
 
-pp = pprint.PrettyPrinter(indent=4)    
+pp = pprint.PrettyPrinter(indent=4)
 #download_category_pages('Discourse analysis')
-download_random_crap(50000)
+download_random_crap(200000)

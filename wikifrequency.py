@@ -35,11 +35,11 @@ def word_frequency(text):
     return(words)
 
 def main():
-    linguistics_text = open("C:/Users/owner/Desktop/Programming/test-repo-online/linguistics_text_dump.txt","r", encoding='utf-8')
-    ling_freq = open('C:/Users/owner/Desktop/Programming/test-repo-online/linguistics_frequencies.txt', 'w+', encoding='utf-8') #things written to a file gotta be strings! Or binary? But usually strings for me!
-    ling_freq.write(word_frequency(linguistics_text))
-    linguistics_text.close()
-    ling_freq.close()
+##    linguistics_text = open("C:/Users/owner/Desktop/Programming/test-repo-online/linguistics_text_dump.txt","r", encoding='utf-8')
+##    ling_freq = open('C:/Users/owner/Desktop/Programming/test-repo-online/linguistics_frequencies.txt', 'w+', encoding='utf-8') #things written to a file gotta be strings! Or binary? But usually strings for me!
+##    ling_freq.write(word_frequency(linguistics_text))
+##    linguistics_text.close()
+##    ling_freq.close()
 
     control_text = open("C:/Users/owner/Desktop/Programming/test-repo-online/wiki_random_dump.txt","r", encoding='utf-8')
     control_freq = open('C:/Users/owner/Desktop/Programming/test-repo-online/control_frequencies.txt', 'w+', encoding='utf-8')
